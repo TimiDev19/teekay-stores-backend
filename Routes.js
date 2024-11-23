@@ -22,8 +22,8 @@ router.post("/create-checkout-session", async (req, res) => {
         payment_method_types:["card"],
         line_items:lineItems,
         mode:"payment",
-        success_url:"http://localhost:3000/",
-        cancel_url:"http://localhost:3000/bags",
+        success_url:"https://teekay-stores.vercel.app/paymentSuccess",
+        cancel_url:"https://teekay-stores.vercel.app/paymentFailure",
     })
 
     res.json({id:session.id})
